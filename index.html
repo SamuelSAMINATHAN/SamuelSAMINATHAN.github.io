@@ -2,60 +2,86 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Étudiant Ingénieur Cyber</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; background: #f4f4f9; color: #333; }
-        header { background: #2c3e50; color: white; padding: 2rem text-align: center; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
-        h1 { margin: 0; font-size: 1.8rem; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
-        .tag { background: #3498db; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.85rem; display: inline-block; margin: 3px; }
-        .btn { display: inline-block; background: #e74c3c; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 10px; }
-        .contact-links { margin-top: 1rem; }
-        .contact-links a { color: white; margin: 0 10px; text-decoration: none; border-bottom: 1px solid transparent; }
-        .contact-links a:hover { border-bottom: 1px solid white; }
-    </style>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
-<header>
-    <h1>Ton Prénom Nom</h1>
-    <p>Étudiant en Cycle Ingénieur - ISEP</p>
-    <div class="contact-links">
-        <a href="mailto:ton.mail@exemple.com">Email</a> | 
-        <a href="https://linkedin.com/in/ton-profil">LinkedIn</a>
+<div id = "header">
+    <div class="container">
+        <nav>
+            <img src="assets/images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Étudiant en cybersécurité</p>
+            <h1>Bonjour, je m'appelle <span>Samuel</span>
+        </div>
     </div>
-</header>
+</div>
+<div id = "about"></div>
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="assets/images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">À propos de moi</h1>
+                <p>Je suis un étudiant passionné par la cybersécurité, actuellement en formation
 
-<div class="container">
-    <section class="card">
-        <h2>À propos</h2>
-        <p>Actuellement en 1ère année de cycle ingénieur à l'ISEP, je me spécialise en <strong>Cybersécurité</strong>. Passionné par la sécurité offensive et l'analyse de réseaux.</p>
-    </section>
-
-    <section class="card">
-        <h2>Compétences techniques</h2>
-        <div class="tag">Réseaux (TCP/IP)</div>
-        <div class="tag">Linux / Bash</div>
-        <div class="tag">Python</div>
-        <div class="tag">Sécurité Offensive</div>
-        <div class="tag">Analyse de Logs</div>
-    </section>
-
-    <section class="card">
-        <h2>Formation</h2>
-        <p><strong>ISEP - École d'ingénieurs du numérique</strong><br>
-        Cycle Ingénieur (Majeure Cybersécurité) | 2025 - 2028 (Prévu)</p>
-    </section>
-
-    <section class="card" style="text-align: center;">
-        <h2>Mon CV complet</h2>
-        <p>Téléchargez mon CV pour plus de détails sur mon parcours.</p>
-        <a href="#" class="btn">Télécharger le CV (PDF)</a>
-    </section>
+                <div class ="tab-titles">
+                    <p class="tab-link active-link" onclick="openTab('skills')"  >Compétences</p>
+                    <p class="tab-link" onclick="openTab('experience')">Expérience</p>
+                    <p class="tab-link" onclick="openTab('education')">Éducation</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>Analyse des vulnérabilités</li>
+                        <li>Tests d'intrusion</li>
+                        <li>Cryptographie</li>
+                        <li>Gestion des incidents de sécurité</li>
+                        <li>Conformité et réglementation</li>
+                    </ul>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
+                        <li><span>2019 - 2021</span><br>Team lead at StarApp LLC.</li>
+                        <li><span>2017 - 2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                        <li><span>2016 - 2017</span><br>Internship at ekart eCommerce.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
+                        <li><span>2016</span><br>MBA from MIT Bangalore.</li>
+                        <li><span>2014</span><br>BBA from ISM Bangalore.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
+<script>
+    var tabLinks = document.getElementsByClassName("tab-link");
+    var tabContents = document.getElementsByClassName("tab-contents");
+    function openTab(tabName){
+        for(tabLink of tabLinks){
+            tabLink.classList.remove("active-link");
+        }
+        for(tabContent of tabContents){
+            tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
