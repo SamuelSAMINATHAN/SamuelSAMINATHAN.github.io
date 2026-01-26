@@ -26,6 +26,9 @@
         </div>
     </div>
 </div>
+
+<!--------------- about ---------------->
+
 <div id = "about"></div>
     <div class="container">
         <div class="row">
@@ -49,6 +52,7 @@
                         <li>Gestion des incidents de sécurité</li>
                         <li>Conformité et réglementation</li>
                     </ul>
+                </div>
                 <div class="tab-contents" id="experience">
                     <ul>
                         <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
@@ -69,10 +73,13 @@
     </div>
 </div>
 
+<!--------------- services ---------------->
+<div id = "services"></div>
+
 <script>
     var tabLinks = document.getElementsByClassName("tab-link");
     var tabContents = document.getElementsByClassName("tab-contents");
-    function openTab(tabName){
+    function openTab(tabname){
         for(tabLink of tabLinks){
             tabLink.classList.remove("active-link");
         }
@@ -80,7 +87,7 @@
             tabContent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
-        document.getElementById(tabName).classList.add("active-tab");
+        document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
 </body>
