@@ -4,6 +4,9 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
   background: #080808;
   color: #fff;
@@ -50,6 +53,9 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
   width: 100%;
+}
+nav .fas{
+  display: none;
 }
 .header-text{
   margin-top: 20%;
@@ -325,6 +331,12 @@ form .btn2{
 .copyright i{
   text-decoration: none;
   color: #ff004f;
+}
+
+#msg{
+  color: #61b752;
+  margin-top: -20px;
+  display: block;
 }
 
 @media only screen and (max-width: 768px){
