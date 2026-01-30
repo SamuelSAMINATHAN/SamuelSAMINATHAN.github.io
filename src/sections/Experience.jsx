@@ -1,38 +1,20 @@
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "Sept. 2026 — Août 2028",
+    role: "Analyste Cybersécurité (Alternance)",
+    company: "En recherche",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Spécialisation en SOC (Security Operations Center), Pentest (tests d'intrusion) et GRC (Governance, Risk & Compliance). Formation pratique en détection de menaces, réponse aux incidents et sécurisation des systèmes.",
+    technologies: ["SIEM", "IDS/IPS", "Wireshark", "Kali Linux", "GRC"],
     current: true,
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
+    period: "Février 2022 — Août 2023",
+    role: "Guichetier Western Union",
+    company: "TTEUROPE Paris",
     description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
-    current: false,
-  },
-  {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
-    description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
-    current: false,
-  },
-  {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
-    description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+      "Traitement des transferts internationaux via la plateforme Western Union. Manipulation de données sensibles et gestion d'incidents opérationnels. Expérience en sécurité des données et conformité réglementaire.",
+    technologies: ["Sécurité des données", "Compliance", "Gestion d'incidents"],
     current: false,
   },
 ];
@@ -52,17 +34,17 @@ export const Experience = () => {
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Parcours Professionnel
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
           >
-            Experience that{" "}
+            Expériences qui{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              parlent d'elles-mêmes.
             </span>
           </h2>
 
@@ -70,8 +52,7 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            Un parcours combinant des expériences professionnelles et une formation en cybersécurité.
           </p>
         </div>
 

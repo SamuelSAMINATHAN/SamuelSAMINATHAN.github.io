@@ -2,38 +2,38 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "Laboratoire Simulation DDoS & Détection",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+      "Simulation d'attaques (L3-L7) via Scapy et Metasploit sur réseau isolé (Kali, Metasploitable) avec détection en temps réel via l'IDS Suricata et le SIEM Wazuh.",
     image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
+    tags: ["Suricata", "Wazuh", "Metasploit", "Scapy"],
     link: "#",
     github: "#",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Système d'Authentification Multi-Facteur (MFA)",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
+      "Développement d'une application sécurisée (Node.js, React, MongoDB) intégrant TOTP via Speakeasy et authentification par QR Code (Google Authenticator).",
     image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+    tags: ["Node.js", "React", "MongoDB", "TOTP"],
     link: "#",
     github: "#",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Modèle ML pour Détection d'Intrusions",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
+      "Développement d'un modèle de Machine Learning (Random Forest) capable d'identifier des tentatives d'intrusion réseau avec une précision de 98% sur le dataset CIC-IDS2017.",
     image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
+    tags: ["Python", "Machine Learning", "Random Forest", "CIC-IDS2017"],
     link: "#",
     github: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "Formation en Cybersécurité (TryHackMe)",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
+      "Apprentissage pratique (SOC Level 1, Pre-Security) couvrant les frameworks (MITRE ATT&CK, Kill Chain) et l'utilisation d'outils d'analyse (Wireshark, Splunk, Zeek, Wazuh).",
     image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    tags: ["SOC", "MITRE ATT&CK", "Wireshark", "Splunk"],
     link: "#",
     github: "#",
   },
@@ -49,18 +49,17 @@ export const Projects = () => {
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Featured Work
+            Projets en Vedette
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Projects that
+            Projets qui
             <span className="font-serif italic font-normal text-white">
               {" "}
-              make an impact.
+              font la différence.
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            Une sélection de mes travaux récents, des applications web complexes aux outils innovants qui résolvent des problèmes réels en cybersécurité.
           </p>
         </div>
 
@@ -135,7 +134,7 @@ export const Projects = () => {
         {/* View All CTA */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <AnimatedBorderButton>
-            View All Projects
+            Voir Tous les Projets
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
         </div>

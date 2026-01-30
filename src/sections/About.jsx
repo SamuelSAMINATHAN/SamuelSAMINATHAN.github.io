@@ -3,26 +3,26 @@ import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Analyse de Sécurité",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Détection et analyse de menaces, diagnostic de vulnérabilités et recommandations de sécurisation.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Tests d'Intrusion",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Identification des failles de sécurité avant qu'elles ne soient exploitées par des attaquants.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    description: "Travail d'équipe dans les opérations de sécurité et incidents.",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Apprentissage continu des dernières menaces et meilleures pratiques en cybersécurité.",
   },
 ];
 
@@ -35,44 +35,33 @@ export const About = () => {
           <div className="space-y-8">
             <div className="animate-fade-in">
               <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                About Me
+                À Propos
               </span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+              Protéger les systèmes,
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one component at a time.
+                c'est ma passion.
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                Je suis un étudiant passionné en cybersécurité, actuellement en cycle ingénieur à l'ISEP. Avec une base solide en informatique et une spécialisation croissante en sécurité des systèmes, je me prépare à relever les défis complexes de la cybersécurité moderne.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                Mon expertise couvre les opérations de sécurité (SOC), les tests d'intrusion (Pentest) et la gouvernance des risques (GRC). Je maîtrise des outils clés comme Wireshark, Suricata, Wazuh et Kali Linux, et je continue d'approfondir mes connaissances à travers des certifications et des projets pratiques.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                Mon objectif est de contribuer à la sécurité informatique des organisations en identifiant les risques avant qu'ils ne deviennent des menaces réelles. Je suis actuellement à la recherche d'une alternance pour mettre ces compétences en pratique.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "La cybersécurité n'est pas une destination, mais un voyage continu d'apprentissage et d'amélioration. Mon rôle est d'être une barrière de protection face aux menaces numériques."
               </p>
             </div>
           </div>

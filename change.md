@@ -188,3 +188,5 @@ Contact
 ajouter mes liens : https://github.com/SamuelSAMINATHAN
 
 [in/samuel-saminathan](https://www.linkedin.com/in/samuel-saminathan/)
+
+mon cv est dans assets , les biutons actuellemennt ne renvoie  rien, programme les pour qu'il renvoie quelque chose, par exemple le bouton téléchargé, le CV doit permettre de télécharger le CV qui est dans assets

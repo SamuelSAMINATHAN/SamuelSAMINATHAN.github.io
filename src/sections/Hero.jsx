@@ -4,30 +4,27 @@ import {
   ChevronDown,
   Github,
   Linkedin,
-  Twitter,
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
+  "Python",
+  "Java",
+  "C",
+  "SQL",
+  "Bash",
+  "PowerShell",
+  "Wireshark",
+  "Kali Linux",
+  "Suricata",
+  "Wazuh",
   "React",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "GraphQL",
-  "PostgreSQL",
   "MongoDB",
-  "Redis",
-  "Docker",
-  "AWS",
-  "Vercel",
+  "Node.js",
   "Tailwind CSS",
-  "Prisma",
-  "Jest",
-  "Cypress",
-  "Figma",
+  "VirtualBox",
   "Git",
-  "GitHub Actions",
 ];
 
 export const Hero = () => {
@@ -69,50 +66,56 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Analyste Cybersécurité • SOC / Pentest / GRC
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafting <span className="text-primary glow-text">digital</span>
+                Créer des <span className="text-primary glow-text">solutions</span>
                 <br />
-                experiences with
+                de cybersécurité
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision.
+                  fiables.
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                Je m'appelle Samuel Saminathan — étudiant en cycle ingénieur à l'ISEP, spécialisé en cybersécurité. Je recherche une alternance (sept. 2026 – août 2028) en SOC, Pentest ou GRC pour renforcer mes compétences.
               </p>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
+                Me contacter <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/assets/cv.pdf';
+                link.download = 'Samuel_Saminathan_CV.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}>
                 <Download className="w-5 h-5" />
-                Download CV
+                Télécharger CV
               </AnimatedBorderButton>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-muted-foreground">Follow me: </span>
+              <span className="text-sm text-muted-foreground">Me suivre : </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/SamuelSAMINATHAN" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/samuel-saminathan/" },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   {<social.icon className="w-5 h-5" />}
@@ -132,8 +135,8 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
-                  alt="Pedro Machado"
+                  src="/profile-photo.png"
+                  alt="Samuel Saminathan"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
@@ -142,15 +145,15 @@ export const Hero = () => {
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                     <span className="text-sm font-medium">
-                      Available for work
+                      Disponible pour alternance
                     </span>
                   </div>
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">Bac+5 en 2028</div>
                   <div className="text-xs text-muted-foreground">
-                    Years Exp.
+                    Formation en cyber
                   </div>
                 </div>
               </div>
@@ -161,7 +164,7 @@ export const Hero = () => {
         {/* Skills Section */}
         <div className="mt-20 animate-fade-in animation-delay-600">
           <p className="text-sm text-muted-foreground mb-6 text-center">
-            Technologies I work with
+            Technologies et outils que j'utilise
           </p>
           <div className="relative overflow-hidden">
             <div
@@ -193,7 +196,7 @@ export const Hero = () => {
           href="#about"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <span className="text-xs uppercase tracking-wider">Défiler</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>
       </div>
