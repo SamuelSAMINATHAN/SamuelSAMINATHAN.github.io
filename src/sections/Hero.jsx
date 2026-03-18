@@ -66,23 +66,23 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Analyste Cybersécurité • SOC / Pentest / GRC
+                Étudiant en cycle ingénieur — ISEP
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Créer des <span className="text-primary glow-text">solutions</span>
+                Concevoir les <span className="text-primary glow-text">technologies</span>
                 <br />
-                de cybersécurité
+                de demain.
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  fiables.
+                  
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Je m'appelle Samuel Saminathan — étudiant en cycle ingénieur à l'ISEP, spécialisé en cybersécurité. Je recherche une alternance (sept. 2026 – août 2028) en SOC, Pentest ou GRC pour renforcer mes compétences.
+                Bienvenue sur mon site vitrine. Je m'appelle Samuel Saminathan, étudiant en première année de cycle ingénieur à l'ISEP. Ce portfolio présente mes projets et mes compétences techniques en constante évolution. Je suis actuellement à la recherche d'une alternance de deux ans (sept. 2026 – août 2028). Curieux, motivé et prêt à relever de nouveaux défis, je souhaite mettre ma polyvalence au service de vos innovations technologiques.
               </p>
             </div>
 
@@ -91,14 +91,7 @@ export const Hero = () => {
               <Button size="lg">
                 Me contacter <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/assets/cv.pdf';
-                link.download = 'Samuel_Saminathan_CV.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}>
+              <AnimatedBorderButton as="a" href="/assets/cv-Samuel-Saminathan.pdf" download="cv-Samuel-Saminathan.pdf">
                 <Download className="w-5 h-5" />
                 Télécharger CV
               </AnimatedBorderButton>

@@ -1,20 +1,20 @@
 const experiences = [
   {
-    period: "Sept. 2026 — Août 2028",
-    role: "Analyste Cybersécurité (Alternance)",
-    company: "En recherche",
+    period: "Mars 2025 — Juil 2025",
+    role: "Développeur Web (Stage)",
+    company: "Cokomasala",
     description:
-      "Spécialisation en SOC (Security Operations Center), Pentest (tests d'intrusion) et GRC (Governance, Risk & Compliance). Formation pratique en détection de menaces, réponse aux incidents et sécurisation des systèmes.",
-    technologies: ["SIEM", "IDS/IPS", "Wireshark", "Kali Linux", "GRC"],
-    current: true,
+      "• Développement intégral du front-end d'un site vitrine de 7 pages (Home, Whole Spices, Blended Masalas, Ground Spices, Rice, Oil & Extracts, et Contact Us).\n• Respect rigoureux du cahier des charges et reporting hebdomadaire sur l'avancement du projet.",
+    technologies: ["Front-end", "Web Development", "Reporting"],
+    current: false,
   },
   {
     period: "Février 2022 — Août 2023",
-    role: "Guichetier Western Union",
-    company: "TTEUROPE Paris",
+    role: "Guichetier",
+    company: "TTEUROPE / Western Union - Paris - Gare du Nord",
     description:
-      "Traitement des transferts internationaux via la plateforme Western Union. Manipulation de données sensibles et gestion d'incidents opérationnels. Expérience en sécurité des données et conformité réglementaire.",
-    technologies: ["Sécurité des données", "Compliance", "Gestion d'incidents"],
+      "• Gestion de flux critiques (30+ clients/jour) dans un environnement haute pression.\n• Sang-froid et gestion de conflits : résolution de situations tendues et traitement des blocages de fonds en lien avec le service client.\n• Conformité bancaire : manipulation de données sensibles et de fonds avec application stricte des procédures KYC/AML (Lutte anti-blanchiment).",
+    technologies: ["Gestion de flux", "Service client", "Conformité KYC/AML"],
     current: false,
   },
 ];
@@ -52,7 +52,7 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            Un parcours combinant des expériences professionnelles et une formation en cybersécurité.
+            Un parcours combinant des expériences professionnelles variées.
           </p>
         </div>
 

@@ -2,40 +2,40 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Laboratoire Simulation DDoS & Détection",
+    title: "DDOS Lab",
     description:
       "Simulation d'attaques (L3-L7) via Scapy et Metasploit sur réseau isolé (Kali, Metasploitable) avec détection en temps réel via l'IDS Suricata et le SIEM Wazuh.",
     image: "/projects/project1.png",
     tags: ["Suricata", "Wazuh", "Metasploit", "Scapy"],
-    link: "#",
-    github: "#",
+    link: "https://github.com/SamuelSAMINATHAN/DDOS_Lab",
+    github: "https://github.com/SamuelSAMINATHAN/DDOS_Lab",
   },
   {
-    title: "Système d'Authentification Multi-Facteur (MFA)",
+    title: "Autoencoder-for-cybersecurity",
     description:
-      "Développement d'une application sécurisée (Node.js, React, MongoDB) intégrant TOTP via Speakeasy et authentification par QR Code (Google Authenticator).",
+      "Ce projet implémente un Auto-Encoder ultra-léger servant de premier filtre dans une architecture de détection d'intrusions (IDS). L'objectif est de réduire la charge d'un modèle plus complexe (GNN) en éliminant le trafic trivialement normal.",
     image: "/projects/project2.png",
-    tags: ["Node.js", "React", "MongoDB", "TOTP"],
-    link: "#",
-    github: "#",
+    tags: ["Python", "Autoencoder", "Machine Learning", "IDS"],
+    link: "https://github.com/SamuelSAMINATHAN/Autoencoder-for-cybersecurity.git",
+    github: "https://github.com/SamuelSAMINATHAN/Autoencoder-for-cybersecurity.git",
   },
   {
-    title: "Modèle ML pour Détection d'Intrusions",
+    title: "GNN for cyber",
     description:
-      "Développement d'un modèle de Machine Learning (Random Forest) capable d'identifier des tentatives d'intrusion réseau avec une précision de 98% sur le dataset CIC-IDS2017.",
+      "Ce projet implémente un système de détection d'anomalies basé sur les Graph Neural Networks (GNN) pour identifier les comportements malveillants dans les processus système. Le modèle analyse les relations entre les processus pour détecter les attaques potentielles.",
     image: "/projects/project3.png",
-    tags: ["Python", "Machine Learning", "Random Forest", "CIC-IDS2017"],
-    link: "#",
-    github: "#",
+    tags: ["Python", "GNN", "Deep Learning", "Cybersecurity"],
+    link: "https://github.com/SamuelSAMINATHAN/GNN.git",
+    github: "https://github.com/SamuelSAMINATHAN/GNN.git",
   },
   {
-    title: "Formation en Cybersécurité (TryHackMe)",
+    title: "Portfolio en java",
     description:
-      "Apprentissage pratique (SOC Level 1, Pre-Security) couvrant les frameworks (MITRE ATT&CK, Kill Chain) et l'utilisation d'outils d'analyse (Wireshark, Splunk, Zeek, Wazuh).",
+      "BoursoBank est une application JavaFX robuste conçue pour la gestion et le suivi en temps réel de portefeuilles d'actifs financiers, incluant les actions et les crypto-monnaies. L'application offre une interface moderne pour visualiser la répartition des actifs, suivre l'évolution historique de la valeur du portefeuille et gérer plusieurs devises.",
     image: "/projects/project4.png",
-    tags: ["SOC", "MITRE ATT&CK", "Wireshark", "Splunk"],
-    link: "#",
-    github: "#",
+    tags: ["Java", "JavaFX", "Finance", "Portfolio"],
+    link: "https://github.com/SamuelSAMINATHAN/Portfolio-in-java.git",
+    github: "https://github.com/SamuelSAMINATHAN/Portfolio-in-java.git",
   },
 ];
 
@@ -129,14 +129,6 @@ export const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            Voir Tous les Projets
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
         </div>
       </div>
     </section>

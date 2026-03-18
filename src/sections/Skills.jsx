@@ -3,36 +3,50 @@ import { useState } from "react";
 
 const skillsData = {
   certifications: [
-    { name: "TOEIC : 945/990", level: "Niveau C1", pdfPath: "/assets/certifications/toeic.pdf" },
-    { name: "Certificat Voltaire : 707/1000", level: "Orthographe", pdfPath: "/assets/certifications/certif-voltaire.pdf" },
-    { name: "CompTIA Security+", level: "En préparation", pdfPath: null },
+    { name: "TOEIC", level: "Score : 945/990 (Niveau C1)", pdfPath: "/assets/certifications/toeic.pdf" },
+    { name: "Certificat Voltaire", level: "Score : 707/1000", pdfPath: "/assets/certifications/certif-voltaire.pdf" },
+    { name: "MOOC SecNumacadémie", level: "– ANSSI (2026)", pdfPath: null },
   ],
   languages: [
-    { name: "Français", level: "Langue maternelle" },
-    { name: "Anglais", level: "Niveau C1 (Courant)" },
-    { name: "Allemand", level: "Niveau B1" },
+    { name: "Français", level: "maternel" },
+    { name: "Anglais", level: "C1 (Courant)" },
+    { name: "Allemand", level: "B1" },
   ],
   technical: [
     {
-      category: "Cybersécurité",
-      skills: ["Wireshark", "Suricata", "Wazuh", "pfsense", "Kali Linux", "VirtualBox"],
+      category: "Systèmes & Réseaux",
+      skills: ["Linux", "Bash", "PowerShell", "VirtualBox", "Docker"],
+    },
+    {
+      category: "Sécurité & Réseau",
+      skills: ["Wireshark", "Wazuh", "pfSense"],
     },
     {
       category: "Développement",
-      skills: ["Python", "Java", "C", "SQL"],
+      skills: ["Python", "Rust", "Java", "PHP", "SQL"],
     },
     {
-      category: "Scripting",
-      skills: ["Bash", "PowerShell"],
+      category: "Web",
+      skills: ["React", "HTML", "CSS"],
+    },
+    {
+      category: "Bureautique & Outils",
+      skills: ["Suite Office", "LaTeX"],
     },
   ],
   softSkills: [
-    "Esprit analytique",
-    "Rigueur",
-    "Communication",
-    "Adaptabilité",
-    "Travail en équipe",
-    "Curiosité"
+    {
+      category: "Analyse",
+      skills: ["Esprit analytique", "Rigueur", "Curiosité"]
+    },
+    {
+      category: "Relationnel",
+      skills: ["Travail en équipe", "Communication"]
+    },
+    {
+      category: "Adaptabilité",
+      skills: ["Fiabilité", "Adaptabilité"]
+    }
   ],
 };
 
@@ -151,17 +165,28 @@ export const Skills = () => {
             {/* Soft Skills */}
             <div>
               <h3 className="text-2xl font-semibold mb-6">Soft Skills</h3>
-              <div className="glass p-6 rounded-2xl space-y-4 animate-fade-in animation-delay-500">
-                <div className="flex flex-wrap gap-3">
-                  {skillsData.softSkills.map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/30 hover:border-primary/70 transition-all"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+              <div className="space-y-4">
+                {skillsData.softSkills.map((category, idx) => (
+                  <div
+                    key={idx}
+                    className="glass p-4 rounded-2xl animate-fade-in"
+                    style={{ animationDelay: `${(idx + 6) * 100}ms` }}
+                  >
+                    <h4 className="font-medium text-primary mb-3">
+                      {category.category}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill, skillIdx) => (
+                        <span
+                          key={skillIdx}
+                          className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/30 hover:border-primary/70 transition-all"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

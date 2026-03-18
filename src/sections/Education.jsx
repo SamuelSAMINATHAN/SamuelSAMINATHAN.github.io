@@ -17,6 +17,14 @@ const educationData = [
       "Formation en cryptographie (RSA), Python, gestion de projet. Projets : encryptor AES-256 (C) et interface Blockly pour robot DJI (Python).",
     highlights: ["Cryptographie RSA", "Python", "Gestion de projet"],
   },
+  {
+    degree: "Baccalauréat Général",
+    school: "Lycée L'ÉSPERANCE",
+    period: "2021",
+    description:
+      "Mention Assez Bien. Spécialités : SVT, Physique-Chimie, Maths complémentaires.",
+    highlights: ["SVT", "Physique-Chimie", "Maths complémentaires"],
+  },
 ];
 
 const experience = [
@@ -33,10 +41,10 @@ const experience = [
       "Apprentissage pratique (SOC Level 1, Pre-Security) couvrant les frameworks (MITRE ATT&CK, Kill Chain) et les outils d'analyse (Wireshark, Splunk, Zeek, Wazuh).",
   },
   {
-    title: "Développeur Web (Stage)",
-    period: "Inde",
+    title: "Silicon Days - Capgemini",
+    period: "IA avant, pendant et après un incident cyber",
     description:
-      "Conception et développement d'un site vitrine. Technologies : HTML, CSS, JavaScript et intégration de contenu chez Cokomasala.",
+      "• Développement d'un Auto-encodeur pour la détection d'anomalies (eBPF).\n• Corrélation via GNN pour le mapping MITRE ATT&CK et export SIEM vers Wazuh.\n• Technologies : PyTorch, Machine Learning, eBPF, Wazuh, SIEM.",
   },
 ];
 
@@ -106,7 +114,7 @@ export const Education = () => {
           <div className="space-y-8">
             <div className="flex items-center gap-3 mb-8">
               <BookOpen className="w-6 h-6 text-primary" />
-              <h3 className="text-2xl font-semibold">Expériences</h3>
+              <h3 className="text-2xl font-semibold">Projets</h3>
             </div>
 
             {experience.map((exp, idx) => (

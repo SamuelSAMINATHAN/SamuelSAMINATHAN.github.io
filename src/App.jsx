@@ -1,11 +1,9 @@
 import { Navbar } from "@/layout/Navbar";
 import { Hero } from "@/sections/Hero";
-import { About } from "@/sections/About";
-import { Projects } from "@/sections/Projects";
+import { Education } from "@/sections/Education";
 import { Experience } from "@/sections/Experience";
 import { Skills } from "@/sections/Skills";
-import { Education } from "@/sections/Education";
-import { Contact } from "@/sections/Contact";
+import { Projects } from "@/sections/Projects";
 import { Footer } from "./layout/Footer";
 
 function App() {
@@ -14,12 +12,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Projects />
+        <Education />
         <Experience />
         <Skills />
-        <Education />
-        <Contact />
+        <Projects />
       </main>
       <Footer />
     </div>

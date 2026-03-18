@@ -3,12 +3,10 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { href: "#about", label: "À propos" },
-  { href: "#projects", label: "Projets" },
+  { href: "#education", label: "Formation" },
   { href: "#experience", label: "Expériences" },
   { href: "#skills", label: "Compétences" },
-  { href: "#education", label: "Formation" },
-  { href: "#contact", label: "Contact" },
+  { href: "#projects", label: "Projets" },
 ];
 
 export const Navbar = () => {
@@ -54,41 +52,27 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button size="sm">Me contacter</Button>
-        </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-foreground cursor-pointer"
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden glass-strong animate-fade-in">
+            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+              {navLinks.map((link, index) => (
+                <a
+                  href={link.href}
+                  key={index}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-lg text-muted-foreground hover:text-foreground py-2"
+                >
+                  {link.label}
+                </a>
+              ))}
+
+            </div>
+          </div>
+        )}
       </nav>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong animate-fade-in">
-          <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-            {navLinks.map((link, index) => (
-              <a
-                href={link.href}
-                key={index}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg text-muted-foreground hover:text-foreground py-2"
-              >
-                {link.label}
-              </a>
-            ))}
-
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Me contacter
-            </Button>
-          </div>
-        </div>
-      )}
     </header>
   );
 };
